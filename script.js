@@ -18,7 +18,7 @@ refs.checkButton.addEventListener('click', function () {
 
   // When no input
   if (!guess) {
-    displayMessage('⛔No number');
+    displayMessage('⛔ No number');
     //   When player wins the game
   } else {
     if (guess === secretNumber) {
