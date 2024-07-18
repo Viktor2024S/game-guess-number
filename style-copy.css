@@ -33,7 +33,8 @@ h1 {
   margin-bottom: 2rem;
 }
 
-button {
+/* =========== BUTTON ================= */
+/* button {
   background-color: #e67e22;
   border: none;
   padding: 0.5rem 1.5rem;
@@ -46,8 +47,134 @@ button {
 
 button:hover {
   background-color: #cf6d17;
+} */
+
+/* =========== BUTTON  1================= */
+/* button {
+  background-color: #e67e22;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+button:hover {
+  background-color: #cf6d17;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); 
+}
+
+button:active {
+  background-color: #b45a10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+} */
+
+/* =========== BUTTON 2 ================= */
+/* button {
+  background-color: #e67e22;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+}
+
+button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+  background-color: #cf6d17;
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5);
+}
+
+button:active {
+  background-color: #b45a10;
+  transform: scale(0.98);
+} */
+
+/* =========== BUTTON 3 ================= */
+button {
+  background: linear-gradient(45deg, #e67e22, #cf6d17);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+  z-index: 1;
+}
+
+button:hover::after {
+  transform: scaleX(1);
+}
+
+button:hover {
+  background: linear-gradient(45deg, #cf6d17, #e67e22);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5);
+}
+
+button:active {
+  background: linear-gradient(45deg, #b45a10, #e67e22);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+/*  */
 .number {
   font-size: 4rem;
   width: 100px;
@@ -60,6 +187,41 @@ button:hover {
   border-radius: 10px;
   background-color: #333;
 }
+
+/* ========================== */
+input[type='number'].guess {
+  border: 2px solid #e67e22;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s,
+    transform 0.3s;
+  width: 100%;
+}
+
+input[type='number'].guess::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input[type='number'].guess:hover {
+  border-color: #cf6d17;
+}
+
+input[type='number'].guess:focus {
+  border-color: #f39c12;
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5);
+  /transform: scale(1.02);
+}
+
+input[type='number'].guess:active {
+  background-color: #b45a10;
+  border-color: #b45a10;
+  transform: scale(0.96);
+}
+
+/* =========================== */
 
 main {
   display: flex;
