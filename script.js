@@ -24,7 +24,8 @@ refs.checkButton.addEventListener('click', function () {
     if (guess === secretNumber) {
       refs.numberElement.textContent = secretNumber;
       displayMessage('🎉Correct Number');
-      refs.bodyElement.style.backgroundColor = '#60b347';
+      // refs.bodyElement.style.backgroundColor = '#60b347';
+      refs.bodyElement.style.backgroundColor = '#9f9';
       refs.numberElement.style.width = '30rem';
       if (score > highscore) {
         highscore = score;
