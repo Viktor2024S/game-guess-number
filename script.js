@@ -2,9 +2,6 @@ import { refs } from './refs.js';
 import { randomNumber } from './utils.js';
 
 let secretNumber = randomNumber(20);
-// =================== console.log(secretNumber);
-console.log(secretNumber);
-// ====================
 let score = 20;
 let highscore = 0;
 
@@ -12,14 +9,10 @@ const displayMessage = function (message) {
   refs.messageElement.textContent = message;
 };
 
-refs.checkButton.addEventListener('click', function () {
+const handlerChecButton = function () {
   const guess = Number(refs.guessInput.value);
-  console.log(guess, typeof guess);
-
-  // When no input
   if (!guess) {
     displayMessage('⛔ No number');
-    //   When player wins the game
   } else {
     if (guess === secretNumber) {
       refs.numberElement.textContent = secretNumber;
@@ -30,9 +23,7 @@ refs.checkButton.addEventListener('click', function () {
         highscore = score;
         refs.highscoreElement.textContent = highscore;
       }
-    }
-    // when guess is wrong
-    else if (guess !== secretNumber) {
+    } else if (guess !== secretNumber) {
       if (score > 1) {
         displayMessage(guess > secretNumber ? '📈 Too high!' : '📉 Too low!');
         score--;
@@ -43,9 +34,9 @@ refs.checkButton.addEventListener('click', function () {
       }
     }
   }
-});
+};
 
-refs.againElement.addEventListener('click', function () {
+const handlerAgainElement = function () {
   score = 20;
   secretNumber = randomNumber(20);
   displayMessage('Start guessing...');
@@ -54,4 +45,8 @@ refs.againElement.addEventListener('click', function () {
   refs.guessInput.value = '';
   refs.bodyElement.style.backgroundColor = '#222';
   refs.numberElement.style.width = '15rem';
-});
+};
+
+refs.checkButton.addEventListener('click', handlerChecButton);
+
+refs.againElement.addEventListener('click', handlerAgainElement);
