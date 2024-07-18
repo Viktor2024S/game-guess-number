@@ -1,0 +1,103 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  margin-top: 2rem;
+  /* margin-bottom: 2rem; */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.between {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: #e67e22;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #cf6d17;
+}
+
+.number {
+  font-size: 4rem;
+  width: 100px;
+  height: 100px;
+  border: 3px solid #e67e22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.left,
+section.right {
+  margin: 1rem 0;
+}
+
+.guess {
+  font-size: 1.5rem;
+  width: 150px;
+  padding: 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.message {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6347;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.label-score span,
+.label-highscore span {
+  font-size: 1.5rem;
+  color: #e67e22;
+}
